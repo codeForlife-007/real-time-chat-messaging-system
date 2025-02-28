@@ -2,7 +2,7 @@ import { useState } from "react";
 import chatImage from '../../assets/chat.png';
 import styles from './SignUp.module.css';
 import { useNavigate } from "react-router-dom";
-import { signUpUser } from "../../service./apiService";
+import { signUpUser } from "../../service/apiService";
 
 function SignUp() {
     const [formData, setFormData] = useState({
@@ -44,12 +44,19 @@ function SignUp() {
             const userId = response.id;
             navigate('/chat', { state: { userId } });
         } catch (err) {
-            console.error("Error saving data: ", err.response?.data || err.message);
-            if (err.response && (err.response.status === 400) || (err.response.status === 409)) {
-                setErrors({ credentials: "Wrong credentials" });
+            if (err.response.data) {
+                const errorStatus = err.response?.data.status;
+                console.log("errorStatus ", errorStatus);
+                if (errorStatus === 409) {
+                    setErrors({ phone: "Phone or email already exists" });
+                } else if (errorStatus === 400) {
+                    setErrors({ credentials: "Invalid credentials" });
+                } else {
+                    setErrors(err.response?.data || { general: "Something went wrong" });   
+                }
             } else {
-                setErrors(err.response?.data || { general: "Something went wrong" });   
-            }
+                setErrors({ general: "Network error or server unreachable" });   
+            }   
         }
     };
 
@@ -90,6 +97,7 @@ function SignUp() {
                             style={{ borderColor: errors.phoneNo ? 'red' : '#ccc' }}
                         />
                     </div>
+                    { errors.phone && <p style={{ color: 'red' }}>{errors.phone}</p>}
                     { errors.credentials && <p style={{ color: 'red' }}>{errors.credentials}</p>}
                     { errors.general && <p style={{ color: 'red' }}>{errors.general}</p>}
                     <button type="submit" className={styles.button}>Sign Up</button>

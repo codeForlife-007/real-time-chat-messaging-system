@@ -5,7 +5,7 @@ import womanImage from '../../assets/woman.png';
 import manImage from '../../assets/man.png';
 import { FiSearch, FiSend, FiX } from 'react-icons/fi';
 import { isToday, isYesterday, format } from 'date-fns';
-import { connectUser, fetchFilteredMessages, fetchUsers, sendMessage, setUpWebSocket, setUserOffline } from "../../service./chatService";
+import { connectUser, fetchFilteredMessages, fetchUsers, sendMessage, setUpWebSocket, setUserOffline } from "../../service/chatService";
 const { useState, useEffect, useRef, useCallback } = require("react");
 
 function Chat() {
