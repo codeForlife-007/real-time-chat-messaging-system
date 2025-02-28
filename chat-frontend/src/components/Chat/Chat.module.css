@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    background: #8BABD8;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    background: #F6F6F6;
+    width: 93%;
+    height: 88%;
+    display: flex;
+}
+
+.leftContainer {
+    border-right: 1px solid #D9DCE0;
+    width: 21rem;
+    height: 100%;
+}
+
+.chatImageContainer {
+    background-color: white;
+    width: 100%;
+    height: 8.9%;
+}
+
+.chatImage {
+    height: 4.1rem;
+    width: 8.1rem;
+    top: 1rem;
+    left: 1.1rem;
+}
+
+.searchBarContainer {
+    width: 20.9rem;
+    height: 7.5%;
+    position: relative;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBar {
+    background: #F5F5F5;
+    border: none;
+    font-size: 13px;
+    align-self: center;
+    border-radius: 15px;
+    width: 17.8rem;
+    height: 2rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+}
+
+.searchBar:focus {
+    outline: 1px solid #D9DCE0;
+}
+
+.searchIcon {
+    position: absolute;
+    top: 1.2rem;
+    left: 2rem;
+    color: gray;
+    font-size: 16px;
+}
+
+.usersContainer {
+    height: 83.5%;
+    width: 20.9rem;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    margin: auto auto;
+    cursor: pointer;
+}
+
+.user:hover {
+    background-color: #f8f8f8;
+}
+
+.userShortName {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0.3rem 0.5rem 1rem;
+    width: 12%;
+    height: 75%;
+    text-align: inherit;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    background-color: #6E80A4;
+    border-radius: 50%;
+}
+
+.onlineDot {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    width: 0.7rem; 
+    height: 0.7rem;
+    background-color: #4CAF50; 
+    border-radius: 50%; 
+    border: 2px solid #ffffff;
+}
+
+.userAnduserMsg {
+    width: 75%;
+    margin-top: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.userName {
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+}
+
+.lastMessageTime {
+    float: right;
+    font-size: 10px;
+    color: #979393;
+}
+
+.userLastMsgContainer {
+    color: #979393;
+    overflow: hidden;
+}
+
+.lastMsg {
+    display: inline-block;
+    font-size: 11px;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.unreadMessageCount {
+    text-align: center;
+    float: right;
+    border: none;
+    width: 5.5%;
+    height: 13px;
+    padding: 3px;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1;
+    color: white;
+    border-radius: 70%;
+    background-color: #3758F9;
+}
+
+.rightContainer {
+    height: 100%;
+    width: 76.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userInformationContainer {
+    border-bottom: 1px solid #D9DCE0;
+    display: inline-block;
+    width: 100%;
+    height: 9%;
+    background-color: white;
+    display: flex;
+}
+
+.userPhoto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+}
+
+.personImage {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userProfileName {
+    margin: 1.5rem 0rem;
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.messagesArea {
+    width: 90%;
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.messagesArea::-webkit-scrollbar {
+    display: none;
+}
+
+.day {
+    background: #FFFFFF;
+    width: fit-content;
+    font-size: 13px;
+    padding: 7px;
+    border-radius: 10px;
+    color: #979393;
+    margin-top: 1%;   
+}
+
+.senderMessage {
+    align-self: flex-end;
+    background-color: #DEE9FF;
+    font-size: 13px;
+    width: fit-content;
+    text-align: left;
+    border-radius: 10px;
+    padding: 0.7rem;
+    font-size: 13px;
+    word-wrap: break-word;
+    margin-bottom: 1%;
+}
+
+.receiverMessage {
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 50%;
+    text-align: left;
+    border-radius: 10px;
+    padding: 0.7rem;
+    background-color: white;
+    font-size: 13px;
+    word-wrap: break-word;
+    margin-bottom: 1%;
+}
+
+
+.date {
+    display: block;
+    font-size: 10px;
+    color: #635e5e;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.messageInput {
+    background: white;
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.message {
+    border: none;
+    outline: none;
+    width: 94%;
+    height: 100%;
+    padding: 3px;
+}
+
+.sendIconStorage {
+    margin: 7px 7px;
+}
+
+.sendIcon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #8BABD8;
+}
+
+.chatContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.userProfileContainer {
+    border-left: 1px solid #D9DCE0;
+    background-color: white;
+    width: 29.1rem;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.closeButton {
+    font-size: 14px;
+    color: rgb(105, 100, 100);
+    margin: 0.7rem 0.7rem;
+    cursor: pointer;
+}
+
+.profileContent {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.userProfileImage {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.profileDetails {
+    text-align: center;
+    font-size: 13px;
+}
+
+.userProfilenAme {
+    margin-top: 1%;
+    font-weight: 500;
+    color: black;
+}
+
+.userProfilePhoneNo {
+    margin-top: 1%;
+    color: #928989;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.userProfileEmail {
+    color: #928989;
+    font-size: 12px;
+    margin-top: 1%;
+    font-weight: 100;
+}
+
+.finalBorder {
+    width: 17rem;
+    margin-top: 10%;
+    font-size: 10px;
+    border-bottom: 1px solid #d1cccc;
+}

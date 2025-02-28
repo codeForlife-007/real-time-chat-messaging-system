@@ -1,0 +1,145 @@
+.main {
+    background: #8BABD8;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    max-width: 550px;
+    max-height: 700px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.chatImage {
+    width: 180px;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: #6E80A4;
+    outline: none;
+    box-shadow: none;
+}
+
+.input::placeholder {
+    color: #6E80A4;
+    font-size: 13px;
+}
+
+.button {
+    width: 80%;
+    padding: 10px;
+    background-color: #6E80A4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.button:hover {
+    background-color: #5a6d8d;
+    border: 1px solid #6E80A4;
+}
+
+@media screen and (max-width: 1200px) { 
+    .container {
+        width: 90%;
+        max-width: 300px; 
+        padding: 15px; 
+    }
+
+    .input, .button {
+        width: 80%;
+        padding: 8px; 
+        font-size: 14px; 
+    }
+
+    .input::placeholder {
+        font-size: 12px;
+    }
+
+    .chatImage {
+        width: 80%;
+        max-width: 150px; 
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    .container {
+        width: 90%;
+        max-width: 300px; 
+        padding: 15px; 
+    }
+
+    .input, .button {
+        width: 80%;
+        padding: 8px; 
+        font-size: 14px; 
+    }
+
+    .input::placeholder {
+        font-size: 11px;
+    }
+
+    .chatImage {
+        width: 80%;
+        max-width: 150px; 
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 450px) { 
+    .container {
+        width: 90%;
+        max-width: 250px; 
+        padding: 15px; 
+    }
+
+    .input, .button {
+        width: 80%;
+        max-width: 200px;
+        padding: 8px; 
+        font-size: 14px; 
+    }
+
+    .input::placeholder {
+        font-size: 10px;
+    }
+
+    .chatImage {
+        width: 80%;
+        max-width: 130px; 
+        margin-bottom: 8px;
+    }
+}
